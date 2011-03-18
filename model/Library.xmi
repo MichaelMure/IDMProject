@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<iaca:Library xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:iaca="http://iaca/1.0" xsi:schemaLocation="http://iaca/1.0 iaca.ecore">
+  <c nom="TOR">
+    <att nom="port">
+      <type xsi:type="iaca:Char"/>
+    </att>
+    <att nom="bit">
+      <type xsi:type="iaca:Integer"/>
+    </att>
+    <inputs xsi:type="iaca:DataInput">
+      <type xsi:type="iaca:Bit"/>
+    </inputs>
+  </c>
+</iaca:Library>
