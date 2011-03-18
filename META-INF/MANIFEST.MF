@@ -3,4 +3,5 @@ Bundle-ManifestVersion: 2
 Bundle-Name: iaca
 Bundle-SymbolicName: iaca
 Bundle-Version: 0.1.0
-Require-Bundle: org.eclipse.emf.ecore
+Require-Bundle: org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi;bundle-version="2.5.0"
