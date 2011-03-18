@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="iaca"
+    nsURI="http://iaca/1.0" nsPrefix="iaca">
+  <eClassifiers xsi:type="ecore:EClass" name="Attributs">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Donnees_entrantes"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Donnees_sortantes"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Ev_entrants"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Ev_sortants"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Composant">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="att" upperBound="-1" eType="#//Attributs"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="de" upperBound="-1" eType="#//DonneesEntrantes.1"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ds" upperBound="-1" eType="#//DonneesSortantes"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ee" eType="#//EvenementsEntrants.1"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="es" eType="#//EvenementsSortants"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DonneesEntrantes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="de" lowerBound="1" upperBound="-1"
+        eType="#//DonneesEntrantes.1" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ee" lowerBound="1" upperBound="-1"
+        eType="#//EvenementsEntrants.1" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DonneesSortantes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ds" lowerBound="1" upperBound="-1"
+        eType="#//DonneesEntrantes.1" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="es" lowerBound="1" upperBound="-1"
+        eType="#//EvenementsEntrants.1" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DonneesEntrantes">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EvenementsEntrants">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Librairie">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name=""/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="c" lowerBound="1" upperBound="-1"
+        eType="#//Composant" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EClass0"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EvenementsEntrants">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EvenementsSortants">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>
