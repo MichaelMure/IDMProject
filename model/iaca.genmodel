@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/iaca/src"
+    modelPluginID="iaca" modelName="Iaca" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>iaca.ecore</foreignModel>
+  <genPackages prefix="Iaca" disposableProviderFactory="true" ecorePackage="iaca.ecore#/">
+    <genClasses ecoreClass="iaca.ecore#//Attributs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iaca.ecore#//Attributs/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iaca.ecore#//Attributs/t"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iaca.ecore#//Attributs/EReference0"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iaca.ecore#//Attributs/type"/>
+    </genClasses>
+    <genClasses ecoreClass="iaca.ecore#//Component">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iaca.ecore#//Component/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iaca.ecore#//Component/att"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iaca.ecore#//Component/IOs"/>
+    </genClasses>
+    <genClasses ecoreClass="iaca.ecore#//Library">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iaca.ecore#//Library/c"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="iaca.ecore#//Type"/>
+    <genClasses ecoreClass="iaca.ecore#//Bit"/>
+    <genClasses ecoreClass="iaca.ecore#//Integer"/>
+    <genClasses ecoreClass="iaca.ecore#//Long"/>
+    <genClasses ecoreClass="iaca.ecore#//Real"/>
+    <genClasses ecoreClass="iaca.ecore#//Char"/>
+    <genClasses ecoreClass="iaca.ecore#//String"/>
+    <genClasses image="false" ecoreClass="iaca.ecore#//Input"/>
+    <genClasses image="false" ecoreClass="iaca.ecore#//Output"/>
+    <genClasses ecoreClass="iaca.ecore#//DataInput">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iaca.ecore#//DataInput/connections"/>
+    </genClasses>
+    <genClasses ecoreClass="iaca.ecore#//DataOutput">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iaca.ecore#//DataOutput/connection"/>
+    </genClasses>
+    <genClasses ecoreClass="iaca.ecore#//EventInput">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iaca.ecore#//EventInput/connections"/>
+    </genClasses>
+    <genClasses ecoreClass="iaca.ecore#//EventOuput">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iaca.ecore#//EventOuput/connection"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="iaca.ecore#//IO">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iaca.ecore#//IO/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iaca.ecore#//IO/name"/>
+    </genClasses>
+    <genClasses ecoreClass="iaca.ecore#//DataConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iaca.ecore#//DataConnection/inputs"/>
+    </genClasses>
+    <genClasses ecoreClass="iaca.ecore#//EventConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iaca.ecore#//EventConnection/inputs"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
