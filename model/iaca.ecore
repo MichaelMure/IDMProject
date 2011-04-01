@@ -14,10 +14,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="att" upperBound="-1" eType="#//Attributs"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" lowerBound="1"
-        upperBound="-1" eType="#//Input" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="outputs" lowerBound="1"
-        upperBound="-1" eType="#//Output" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="IOs" lowerBound="1" upperBound="-1"
+        eType="#//IO" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Library">
     <eStructuralFeatures xsi:type="ecore:EReference" name="c" lowerBound="1" upperBound="-1"
@@ -33,15 +31,19 @@
   <eClassifiers xsi:type="ecore:EClass" name="Input" abstract="true" eSuperTypes="#//IO"/>
   <eClassifiers xsi:type="ecore:EClass" name="Output" abstract="true" eSuperTypes="#//IO"/>
   <eClassifiers xsi:type="ecore:EClass" name="DataInput" eSuperTypes="#//Input">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="connections" lowerBound="1"
-        upperBound="-1" eType="#//DataConnection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connections" upperBound="-1"
+        eType="#//DataConnection" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DataOutput" eSuperTypes="#//Input #//Output"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataOutput" eSuperTypes="#//Output">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connection" eType="#//DataConnection"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EventInput" eSuperTypes="#//Input">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="connections" lowerBound="1"
-        upperBound="-1" eType="#//EventConnection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connections" upperBound="-1"
+        eType="#//EventConnection" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EventOuput" eSuperTypes="#//Output"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EventOuput" eSuperTypes="#//Output">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connection" eType="#//EventConnection"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IO" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Type"
         containment="true"/>
@@ -49,9 +51,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="DataConnection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="output" lowerBound="1"
         eType="#//DataOutput"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" lowerBound="1"
+        upperBound="-1" eType="#//DataInput"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EventConnection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="output" lowerBound="1"
         eType="#//EventOuput"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" lowerBound="1"
+        upperBound="-1" eType="#//EventInput"/>
   </eClassifiers>
 </ecore:EPackage>

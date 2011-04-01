@@ -7,8 +7,8 @@
     <att nom="bit">
       <type xsi:type="iaca:Integer"/>
     </att>
-    <inputs xsi:type="iaca:DataInput">
+    <IOs xsi:type="iaca:DataInput">
       <type xsi:type="iaca:Bit"/>
-    </inputs>
+    </IOs>
   </c>
 </iaca:Library>
