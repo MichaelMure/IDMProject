@@ -4,14 +4,14 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="iaca"
     nsURI="http://iaca/1.0" nsPrefix="iaca">
   <eClassifiers xsi:type="ecore:EClass" name="Attributs">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="t" eType="#//Type"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="EReference0" eType="#//Attributs"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Type"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="att" upperBound="-1" eType="#//Attributs"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="IOs" lowerBound="1" upperBound="-1"
@@ -47,6 +47,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="IO" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Type"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataConnection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="output" lowerBound="1"

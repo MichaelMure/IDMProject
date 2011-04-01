@@ -1,13 +1,102 @@
 <?xml version="1.0" encoding="ASCII"?>
 <iaca:Library xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:iaca="http://iaca/1.0" xsi:schemaLocation="http://iaca/1.0 iaca.ecore">
-  <c nom="TOR">
-    <att nom="port">
+  <c name="TOR">
+    <att name="port">
       <type xsi:type="iaca:Char"/>
     </att>
-    <att nom="bit">
+    <att name="bit">
       <type xsi:type="iaca:Integer"/>
     </att>
-    <IOs xsi:type="iaca:DataInput">
+    <IOs xsi:type="iaca:DataInput" name="E">
+      <type xsi:type="iaca:Bit"/>
+    </IOs>
+  </c>
+  <c name="bit">
+    <att name="port">
+      <type xsi:type="iaca:Char"/>
+    </att>
+    <att name="bit">
+      <type xsi:type="iaca:Integer"/>
+    </att>
+    <IOs xsi:type="iaca:DataOutput" name="S">
+      <type xsi:type="iaca:Bit"/>
+    </IOs>
+  </c>
+  <c name="filtre">
+    <att name="Tc">
+      <type xsi:type="iaca:Integer"/>
+    </att>
+    <IOs xsi:type="iaca:DataInput" name="e">
+      <type xsi:type="iaca:Bit"/>
+    </IOs>
+    <IOs xsi:type="iaca:DataOutput" name="s">
+      <type xsi:type="iaca:Bit"/>
+    </IOs>
+    <IOs xsi:type="iaca:EventInput" name="ev_h">
+      <type xsi:type="iaca:Bit"/>
+    </IOs>
+  </c>
+  <c name="clock">
+    <att name="FOSC">
+      <type xsi:type="iaca:Long"/>
+    </att>
+    <att name="periode">
+      <type xsi:type="iaca:Long"/>
+    </att>
+    <IOs xsi:type="iaca:EventOuput" name="ev_h">
+      <type xsi:type="iaca:Bit"/>
+    </IOs>
+  </c>
+  <c name="front">
+    <IOs xsi:type="iaca:DataInput" name="E">
+      <type xsi:type="iaca:Bit"/>
+    </IOs>
+    <IOs xsi:type="iaca:EventOuput" name="fm">
+      <type xsi:type="iaca:Bit"/>
+    </IOs>
+    <IOs xsi:type="iaca:EventOuput" name="fd">
+      <type xsi:type="iaca:Bit"/>
+    </IOs>
+  </c>
+  <c name="diviseur">
+    <att name="ratio">
+      <type xsi:type="iaca:Long"/>
+    </att>
+    <IOs xsi:type="iaca:EventInput" name="ev">
+      <type xsi:type="iaca:Bit"/>
+    </IOs>
+    <IOs xsi:type="iaca:EventOuput" name="ev_h">
+      <type xsi:type="iaca:Bit"/>
+    </IOs>
+  </c>
+  <c name="bascule">
+    <IOs xsi:type="iaca:DataInput" name="E">
+      <type xsi:type="iaca:Bit"/>
+    </IOs>
+    <IOs xsi:type="iaca:DataOutput" name="Q">
+      <type xsi:type="iaca:Bit"/>
+    </IOs>
+    <IOs xsi:type="iaca:DataOutput" name="Qb">
+      <type xsi:type="iaca:Bit"/>
+    </IOs>
+    <IOs xsi:type="iaca:EventInput" name="ev_h">
+      <type xsi:type="iaca:Bit"/>
+    </IOs>
+  </c>
+  <c name="cligno">
+    <att name="port">
+      <type xsi:type="iaca:Char"/>
+    </att>
+    <att name="bit">
+      <type xsi:type="iaca:Integer"/>
+    </att>
+    <att name="periode">
+      <type xsi:type="iaca:Long"/>
+    </att>
+    <IOs xsi:type="iaca:DataOutput" name="Q">
+      <type xsi:type="iaca:Bit"/>
+    </IOs>
+    <IOs xsi:type="iaca:EventInput" name="ev_h">
       <type xsi:type="iaca:Bit"/>
     </IOs>
   </c>

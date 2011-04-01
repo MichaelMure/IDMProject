@@ -4,7 +4,7 @@
     <children xmi:type="notation:Node" xmi:id="_Ci3081E3EeC6i8M42II38A" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_Ci309FE3EeC6i8M42II38A" type="5001">
       <children xmi:type="notation:Node" xmi:id="_DiBvYFE4EeC6i8M42II38A" type="2001">
-        <element xmi:type="ecore:EAttribute" href="iaca.ecore#//Attributs/nom"/>
+        <element xmi:type="ecore:EAttribute" href="iaca.ecore#//Attributs/name"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_DiBvYVE4EeC6i8M42II38A"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_Ci309VE3EeC6i8M42II38A"/>
@@ -24,7 +24,7 @@
     <children xmi:type="notation:Node" xmi:id="_jHnSg1E3EeC6i8M42II38A" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_jHnShFE3EeC6i8M42II38A" type="5001">
       <children xmi:type="notation:Node" xmi:id="_wAYUsFE3EeC6i8M42II38A" type="2001">
-        <element xmi:type="ecore:EAttribute" href="iaca.ecore#//Component/nom"/>
+        <element xmi:type="ecore:EAttribute" href="iaca.ecore#//Component/name"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_wAYUsVE3EeC6i8M42II38A"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_jHnShVE3EeC6i8M42II38A"/>
@@ -271,6 +271,10 @@
   <children xmi:type="notation:Node" xmi:id="_w_bcQFFKEeCxb5N4rCv9yw" type="1001">
     <children xmi:type="notation:Node" xmi:id="_w_bcQ1FKEeCxb5N4rCv9yw" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_w_bcRFFKEeCxb5N4rCv9yw" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_5TeeIFxjEeCb4INUOdkF4w" type="2001">
+        <element xmi:type="ecore:EAttribute" href="iaca.ecore#//IO/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_5TeeIVxjEeCb4INUOdkF4w"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_w_bcRVFKEeCxb5N4rCv9yw"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_w_bcRlFKEeCxb5N4rCv9yw"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_w_bcR1FKEeCxb5N4rCv9yw"/>
