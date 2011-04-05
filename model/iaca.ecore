@@ -4,11 +4,11 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="iaca"
     nsURI="http://iaca/1.0" nsPrefix="iaca">
   <eClassifiers xsi:type="ecore:EClass" name="Attributs">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="t" eType="#//Type"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="EReference0" eType="#//Attributs"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Type"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -59,4 +59,36 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" lowerBound="1"
         upperBound="-1" eType="#//EventInput"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentInstance" eSuperTypes="#//Instance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="#//Component"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attInstance" lowerBound="1"
+        upperBound="-1" eType="#//AttributsInstance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ioinstance" lowerBound="1"
+        upperBound="-1" eType="#//IOInstance"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InputInstance"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IOInstance" eSuperTypes="#//Instance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="io" upperBound="-1" eType="#//IO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributsInstance" eSuperTypes="#//Instance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributs" upperBound="-1"
+        eType="#//Attributs"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectionInstance" abstract="true"
+      eSuperTypes="#//Instance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataC" upperBound="-1"
+        eType="#//DataConnection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventC" upperBound="-1"
+        eType="#//EventConnection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ioinstance" lowerBound="2"
+        upperBound="2" eType="#//IOInstance" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataInstance" eSuperTypes="#//ConnectionInstance"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EventInstance" eSuperTypes="#//ConnectionInstance"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Process">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instances" upperBound="-1"
+        eType="#//Instance" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Instance" abstract="true"/>
 </ecore:EPackage>
