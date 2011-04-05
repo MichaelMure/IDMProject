@@ -72,22 +72,13 @@ public interface IacaPackage extends EPackage {
 	int ATTRIBUTS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATTRIBUTS__NAME = 0;
-
-	/**
 	 * The feature id for the '<em><b>T</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTS__T = 1;
+	int ATTRIBUTS__T = 0;
 
 	/**
 	 * The feature id for the '<em><b>EReference0</b></em>' reference.
@@ -96,7 +87,7 @@ public interface IacaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTS__EREFERENCE0 = 2;
+	int ATTRIBUTS__EREFERENCE0 = 1;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -105,7 +96,16 @@ public interface IacaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTS__TYPE = 3;
+	int ATTRIBUTS__TYPE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTS__NAME = 3;
 
 	/**
 	 * The number of structural features of the '<em>Attributs</em>' class.
@@ -676,6 +676,313 @@ public interface IacaPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link iaca.impl.InstanceImpl <em>Instance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see iaca.impl.InstanceImpl
+	 * @see iaca.impl.IacaPackageImpl#getInstance()
+	 * @generated
+	 */
+	int INSTANCE = 27;
+
+	/**
+	 * The number of structural features of the '<em>Instance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_FEATURE_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link iaca.impl.ComponentInstanceImpl <em>Component Instance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see iaca.impl.ComponentInstanceImpl
+	 * @see iaca.impl.IacaPackageImpl#getComponentInstance()
+	 * @generated
+	 */
+	int COMPONENT_INSTANCE = 19;
+
+	/**
+	 * The feature id for the '<em><b>Components</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_INSTANCE__COMPONENTS = INSTANCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Att Instance</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_INSTANCE__ATT_INSTANCE = INSTANCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Ioinstance</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_INSTANCE__IOINSTANCE = INSTANCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Component Instance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_INSTANCE_FEATURE_COUNT = INSTANCE_FEATURE_COUNT + 3;
+
+	/**
+	 * The meta object id for the '{@link iaca.impl.InputInstanceImpl <em>Input Instance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see iaca.impl.InputInstanceImpl
+	 * @see iaca.impl.IacaPackageImpl#getInputInstance()
+	 * @generated
+	 */
+	int INPUT_INSTANCE = 20;
+
+	/**
+	 * The number of structural features of the '<em>Input Instance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_INSTANCE_FEATURE_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link iaca.impl.IOInstanceImpl <em>IO Instance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see iaca.impl.IOInstanceImpl
+	 * @see iaca.impl.IacaPackageImpl#getIOInstance()
+	 * @generated
+	 */
+	int IO_INSTANCE = 21;
+
+	/**
+	 * The feature id for the '<em><b>Io</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_INSTANCE__IO = INSTANCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>IO Instance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_INSTANCE_FEATURE_COUNT = INSTANCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link iaca.impl.AttributsInstanceImpl <em>Attributs Instance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see iaca.impl.AttributsInstanceImpl
+	 * @see iaca.impl.IacaPackageImpl#getAttributsInstance()
+	 * @generated
+	 */
+	int ATTRIBUTS_INSTANCE = 22;
+
+	/**
+	 * The feature id for the '<em><b>Attributs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTS_INSTANCE__ATTRIBUTS = INSTANCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Attributs Instance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTS_INSTANCE_FEATURE_COUNT = INSTANCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link iaca.impl.ConnectionInstanceImpl <em>Connection Instance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see iaca.impl.ConnectionInstanceImpl
+	 * @see iaca.impl.IacaPackageImpl#getConnectionInstance()
+	 * @generated
+	 */
+	int CONNECTION_INSTANCE = 23;
+
+	/**
+	 * The feature id for the '<em><b>Data C</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_INSTANCE__DATA_C = INSTANCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Event C</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_INSTANCE__EVENT_C = INSTANCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Ioinstance</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_INSTANCE__IOINSTANCE = INSTANCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Connection Instance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_INSTANCE_FEATURE_COUNT = INSTANCE_FEATURE_COUNT + 3;
+
+	/**
+	 * The meta object id for the '{@link iaca.impl.DataInstanceImpl <em>Data Instance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see iaca.impl.DataInstanceImpl
+	 * @see iaca.impl.IacaPackageImpl#getDataInstance()
+	 * @generated
+	 */
+	int DATA_INSTANCE = 24;
+
+	/**
+	 * The feature id for the '<em><b>Data C</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_INSTANCE__DATA_C = CONNECTION_INSTANCE__DATA_C;
+
+	/**
+	 * The feature id for the '<em><b>Event C</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_INSTANCE__EVENT_C = CONNECTION_INSTANCE__EVENT_C;
+
+	/**
+	 * The feature id for the '<em><b>Ioinstance</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_INSTANCE__IOINSTANCE = CONNECTION_INSTANCE__IOINSTANCE;
+
+	/**
+	 * The number of structural features of the '<em>Data Instance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_INSTANCE_FEATURE_COUNT = CONNECTION_INSTANCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link iaca.impl.EventInstanceImpl <em>Event Instance</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see iaca.impl.EventInstanceImpl
+	 * @see iaca.impl.IacaPackageImpl#getEventInstance()
+	 * @generated
+	 */
+	int EVENT_INSTANCE = 25;
+
+	/**
+	 * The feature id for the '<em><b>Data C</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT_INSTANCE__DATA_C = CONNECTION_INSTANCE__DATA_C;
+
+	/**
+	 * The feature id for the '<em><b>Event C</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT_INSTANCE__EVENT_C = CONNECTION_INSTANCE__EVENT_C;
+
+	/**
+	 * The feature id for the '<em><b>Ioinstance</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT_INSTANCE__IOINSTANCE = CONNECTION_INSTANCE__IOINSTANCE;
+
+	/**
+	 * The number of structural features of the '<em>Event Instance</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT_INSTANCE_FEATURE_COUNT = CONNECTION_INSTANCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link iaca.impl.ProcessImpl <em>Process</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see iaca.impl.ProcessImpl
+	 * @see iaca.impl.IacaPackageImpl#getProcess()
+	 * @generated
+	 */
+	int PROCESS = 26;
+
+	/**
+	 * The feature id for the '<em><b>Instances</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__INSTANCES = 0;
+
+	/**
+	 * The number of structural features of the '<em>Process</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_FEATURE_COUNT = 1;
+
+
+	/**
 	 * Returns the meta object for class '{@link iaca.Attributs <em>Attributs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1042,6 +1349,195 @@ public interface IacaPackage extends EPackage {
 	EReference getEventConnection_Inputs();
 
 	/**
+	 * Returns the meta object for class '{@link iaca.ComponentInstance <em>Component Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Component Instance</em>'.
+	 * @see iaca.ComponentInstance
+	 * @generated
+	 */
+	EClass getComponentInstance();
+
+	/**
+	 * Returns the meta object for the reference list '{@link iaca.ComponentInstance#getComponents <em>Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Components</em>'.
+	 * @see iaca.ComponentInstance#getComponents()
+	 * @see #getComponentInstance()
+	 * @generated
+	 */
+	EReference getComponentInstance_Components();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link iaca.ComponentInstance#getAttInstance <em>Att Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Att Instance</em>'.
+	 * @see iaca.ComponentInstance#getAttInstance()
+	 * @see #getComponentInstance()
+	 * @generated
+	 */
+	EReference getComponentInstance_AttInstance();
+
+	/**
+	 * Returns the meta object for the reference list '{@link iaca.ComponentInstance#getIoinstance <em>Ioinstance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Ioinstance</em>'.
+	 * @see iaca.ComponentInstance#getIoinstance()
+	 * @see #getComponentInstance()
+	 * @generated
+	 */
+	EReference getComponentInstance_Ioinstance();
+
+	/**
+	 * Returns the meta object for class '{@link iaca.InputInstance <em>Input Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Input Instance</em>'.
+	 * @see iaca.InputInstance
+	 * @generated
+	 */
+	EClass getInputInstance();
+
+	/**
+	 * Returns the meta object for class '{@link iaca.IOInstance <em>IO Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>IO Instance</em>'.
+	 * @see iaca.IOInstance
+	 * @generated
+	 */
+	EClass getIOInstance();
+
+	/**
+	 * Returns the meta object for the reference list '{@link iaca.IOInstance#getIo <em>Io</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Io</em>'.
+	 * @see iaca.IOInstance#getIo()
+	 * @see #getIOInstance()
+	 * @generated
+	 */
+	EReference getIOInstance_Io();
+
+	/**
+	 * Returns the meta object for class '{@link iaca.AttributsInstance <em>Attributs Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Attributs Instance</em>'.
+	 * @see iaca.AttributsInstance
+	 * @generated
+	 */
+	EClass getAttributsInstance();
+
+	/**
+	 * Returns the meta object for the reference list '{@link iaca.AttributsInstance#getAttributs <em>Attributs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Attributs</em>'.
+	 * @see iaca.AttributsInstance#getAttributs()
+	 * @see #getAttributsInstance()
+	 * @generated
+	 */
+	EReference getAttributsInstance_Attributs();
+
+	/**
+	 * Returns the meta object for class '{@link iaca.ConnectionInstance <em>Connection Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Connection Instance</em>'.
+	 * @see iaca.ConnectionInstance
+	 * @generated
+	 */
+	EClass getConnectionInstance();
+
+	/**
+	 * Returns the meta object for the reference list '{@link iaca.ConnectionInstance#getDataC <em>Data C</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Data C</em>'.
+	 * @see iaca.ConnectionInstance#getDataC()
+	 * @see #getConnectionInstance()
+	 * @generated
+	 */
+	EReference getConnectionInstance_DataC();
+
+	/**
+	 * Returns the meta object for the reference list '{@link iaca.ConnectionInstance#getEventC <em>Event C</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Event C</em>'.
+	 * @see iaca.ConnectionInstance#getEventC()
+	 * @see #getConnectionInstance()
+	 * @generated
+	 */
+	EReference getConnectionInstance_EventC();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link iaca.ConnectionInstance#getIoinstance <em>Ioinstance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Ioinstance</em>'.
+	 * @see iaca.ConnectionInstance#getIoinstance()
+	 * @see #getConnectionInstance()
+	 * @generated
+	 */
+	EReference getConnectionInstance_Ioinstance();
+
+	/**
+	 * Returns the meta object for class '{@link iaca.DataInstance <em>Data Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Data Instance</em>'.
+	 * @see iaca.DataInstance
+	 * @generated
+	 */
+	EClass getDataInstance();
+
+	/**
+	 * Returns the meta object for class '{@link iaca.EventInstance <em>Event Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Event Instance</em>'.
+	 * @see iaca.EventInstance
+	 * @generated
+	 */
+	EClass getEventInstance();
+
+	/**
+	 * Returns the meta object for class '{@link iaca.Process <em>Process</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Process</em>'.
+	 * @see iaca.Process
+	 * @generated
+	 */
+	EClass getProcess();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link iaca.Process#getInstances <em>Instances</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Instances</em>'.
+	 * @see iaca.Process#getInstances()
+	 * @see #getProcess()
+	 * @generated
+	 */
+	EReference getProcess_Instances();
+
+	/**
+	 * Returns the meta object for class '{@link iaca.Instance <em>Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Instance</em>'.
+	 * @see iaca.Instance
+	 * @generated
+	 */
+	EClass getInstance();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1380,6 +1876,168 @@ public interface IacaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EVENT_CONNECTION__INPUTS = eINSTANCE.getEventConnection_Inputs();
+
+		/**
+		 * The meta object literal for the '{@link iaca.impl.ComponentInstanceImpl <em>Component Instance</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see iaca.impl.ComponentInstanceImpl
+		 * @see iaca.impl.IacaPackageImpl#getComponentInstance()
+		 * @generated
+		 */
+		EClass COMPONENT_INSTANCE = eINSTANCE.getComponentInstance();
+
+		/**
+		 * The meta object literal for the '<em><b>Components</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT_INSTANCE__COMPONENTS = eINSTANCE.getComponentInstance_Components();
+
+		/**
+		 * The meta object literal for the '<em><b>Att Instance</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT_INSTANCE__ATT_INSTANCE = eINSTANCE.getComponentInstance_AttInstance();
+
+		/**
+		 * The meta object literal for the '<em><b>Ioinstance</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT_INSTANCE__IOINSTANCE = eINSTANCE.getComponentInstance_Ioinstance();
+
+		/**
+		 * The meta object literal for the '{@link iaca.impl.InputInstanceImpl <em>Input Instance</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see iaca.impl.InputInstanceImpl
+		 * @see iaca.impl.IacaPackageImpl#getInputInstance()
+		 * @generated
+		 */
+		EClass INPUT_INSTANCE = eINSTANCE.getInputInstance();
+
+		/**
+		 * The meta object literal for the '{@link iaca.impl.IOInstanceImpl <em>IO Instance</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see iaca.impl.IOInstanceImpl
+		 * @see iaca.impl.IacaPackageImpl#getIOInstance()
+		 * @generated
+		 */
+		EClass IO_INSTANCE = eINSTANCE.getIOInstance();
+
+		/**
+		 * The meta object literal for the '<em><b>Io</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IO_INSTANCE__IO = eINSTANCE.getIOInstance_Io();
+
+		/**
+		 * The meta object literal for the '{@link iaca.impl.AttributsInstanceImpl <em>Attributs Instance</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see iaca.impl.AttributsInstanceImpl
+		 * @see iaca.impl.IacaPackageImpl#getAttributsInstance()
+		 * @generated
+		 */
+		EClass ATTRIBUTS_INSTANCE = eINSTANCE.getAttributsInstance();
+
+		/**
+		 * The meta object literal for the '<em><b>Attributs</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ATTRIBUTS_INSTANCE__ATTRIBUTS = eINSTANCE.getAttributsInstance_Attributs();
+
+		/**
+		 * The meta object literal for the '{@link iaca.impl.ConnectionInstanceImpl <em>Connection Instance</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see iaca.impl.ConnectionInstanceImpl
+		 * @see iaca.impl.IacaPackageImpl#getConnectionInstance()
+		 * @generated
+		 */
+		EClass CONNECTION_INSTANCE = eINSTANCE.getConnectionInstance();
+
+		/**
+		 * The meta object literal for the '<em><b>Data C</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONNECTION_INSTANCE__DATA_C = eINSTANCE.getConnectionInstance_DataC();
+
+		/**
+		 * The meta object literal for the '<em><b>Event C</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONNECTION_INSTANCE__EVENT_C = eINSTANCE.getConnectionInstance_EventC();
+
+		/**
+		 * The meta object literal for the '<em><b>Ioinstance</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONNECTION_INSTANCE__IOINSTANCE = eINSTANCE.getConnectionInstance_Ioinstance();
+
+		/**
+		 * The meta object literal for the '{@link iaca.impl.DataInstanceImpl <em>Data Instance</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see iaca.impl.DataInstanceImpl
+		 * @see iaca.impl.IacaPackageImpl#getDataInstance()
+		 * @generated
+		 */
+		EClass DATA_INSTANCE = eINSTANCE.getDataInstance();
+
+		/**
+		 * The meta object literal for the '{@link iaca.impl.EventInstanceImpl <em>Event Instance</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see iaca.impl.EventInstanceImpl
+		 * @see iaca.impl.IacaPackageImpl#getEventInstance()
+		 * @generated
+		 */
+		EClass EVENT_INSTANCE = eINSTANCE.getEventInstance();
+
+		/**
+		 * The meta object literal for the '{@link iaca.impl.ProcessImpl <em>Process</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see iaca.impl.ProcessImpl
+		 * @see iaca.impl.IacaPackageImpl#getProcess()
+		 * @generated
+		 */
+		EClass PROCESS = eINSTANCE.getProcess();
+
+		/**
+		 * The meta object literal for the '<em><b>Instances</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESS__INSTANCES = eINSTANCE.getProcess_Instances();
+
+		/**
+		 * The meta object literal for the '{@link iaca.impl.InstanceImpl <em>Instance</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see iaca.impl.InstanceImpl
+		 * @see iaca.impl.IacaPackageImpl#getInstance()
+		 * @generated
+		 */
+		EClass INSTANCE = eINSTANCE.getInstance();
 
 	}
 

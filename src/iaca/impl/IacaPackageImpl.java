@@ -7,18 +7,26 @@
 package iaca.impl;
 
 import iaca.Attributs;
+import iaca.AttributsInstance;
 import iaca.Bit;
 import iaca.Char;
 import iaca.Component;
+import iaca.ComponentInstance;
+import iaca.ConnectionInstance;
 import iaca.DataConnection;
 import iaca.DataInput;
+import iaca.DataInstance;
 import iaca.DataOutput;
 import iaca.EventConnection;
 import iaca.EventInput;
+import iaca.EventInstance;
 import iaca.EventOuput;
+import iaca.IOInstance;
 import iaca.IacaFactory;
 import iaca.IacaPackage;
 import iaca.Input;
+import iaca.InputInstance;
+import iaca.Instance;
 import iaca.Library;
 import iaca.Output;
 import iaca.Real;
@@ -172,6 +180,69 @@ public class IacaPackageImpl extends EPackageImpl implements IacaPackage {
 	private EClass eventConnectionEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass componentInstanceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass inputInstanceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ioInstanceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass attributsInstanceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass connectionInstanceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dataInstanceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eventInstanceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass processEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass instanceEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -247,7 +318,7 @@ public class IacaPackageImpl extends EPackageImpl implements IacaPackage {
 	 * @generated
 	 */
 	public EAttribute getAttributs_Name() {
-		return (EAttribute)attributsEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)attributsEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -256,7 +327,7 @@ public class IacaPackageImpl extends EPackageImpl implements IacaPackage {
 	 * @generated
 	 */
 	public EReference getAttributs_T() {
-		return (EReference)attributsEClass.getEStructuralFeatures().get(1);
+		return (EReference)attributsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -265,7 +336,7 @@ public class IacaPackageImpl extends EPackageImpl implements IacaPackage {
 	 * @generated
 	 */
 	public EReference getAttributs_EReference0() {
-		return (EReference)attributsEClass.getEStructuralFeatures().get(2);
+		return (EReference)attributsEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -274,7 +345,7 @@ public class IacaPackageImpl extends EPackageImpl implements IacaPackage {
 	 * @generated
 	 */
 	public EReference getAttributs_Type() {
-		return (EReference)attributsEClass.getEStructuralFeatures().get(3);
+		return (EReference)attributsEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -552,6 +623,168 @@ public class IacaPackageImpl extends EPackageImpl implements IacaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getComponentInstance() {
+		return componentInstanceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getComponentInstance_Components() {
+		return (EReference)componentInstanceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getComponentInstance_AttInstance() {
+		return (EReference)componentInstanceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getComponentInstance_Ioinstance() {
+		return (EReference)componentInstanceEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInputInstance() {
+		return inputInstanceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIOInstance() {
+		return ioInstanceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIOInstance_Io() {
+		return (EReference)ioInstanceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAttributsInstance() {
+		return attributsInstanceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAttributsInstance_Attributs() {
+		return (EReference)attributsInstanceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getConnectionInstance() {
+		return connectionInstanceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConnectionInstance_DataC() {
+		return (EReference)connectionInstanceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConnectionInstance_EventC() {
+		return (EReference)connectionInstanceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConnectionInstance_Ioinstance() {
+		return (EReference)connectionInstanceEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDataInstance() {
+		return dataInstanceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEventInstance() {
+		return eventInstanceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getProcess() {
+		return processEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProcess_Instances() {
+		return (EReference)processEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInstance() {
+		return instanceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public IacaFactory getIacaFactory() {
 		return (IacaFactory)getEFactoryInstance();
 	}
@@ -576,10 +809,10 @@ public class IacaPackageImpl extends EPackageImpl implements IacaPackage {
 
 		// Create classes and their features
 		attributsEClass = createEClass(ATTRIBUTS);
-		createEAttribute(attributsEClass, ATTRIBUTS__NAME);
 		createEReference(attributsEClass, ATTRIBUTS__T);
 		createEReference(attributsEClass, ATTRIBUTS__EREFERENCE0);
 		createEReference(attributsEClass, ATTRIBUTS__TYPE);
+		createEAttribute(attributsEClass, ATTRIBUTS__NAME);
 
 		componentEClass = createEClass(COMPONENT);
 		createEAttribute(componentEClass, COMPONENT__NAME);
@@ -628,6 +861,33 @@ public class IacaPackageImpl extends EPackageImpl implements IacaPackage {
 
 		eventConnectionEClass = createEClass(EVENT_CONNECTION);
 		createEReference(eventConnectionEClass, EVENT_CONNECTION__INPUTS);
+
+		componentInstanceEClass = createEClass(COMPONENT_INSTANCE);
+		createEReference(componentInstanceEClass, COMPONENT_INSTANCE__COMPONENTS);
+		createEReference(componentInstanceEClass, COMPONENT_INSTANCE__ATT_INSTANCE);
+		createEReference(componentInstanceEClass, COMPONENT_INSTANCE__IOINSTANCE);
+
+		inputInstanceEClass = createEClass(INPUT_INSTANCE);
+
+		ioInstanceEClass = createEClass(IO_INSTANCE);
+		createEReference(ioInstanceEClass, IO_INSTANCE__IO);
+
+		attributsInstanceEClass = createEClass(ATTRIBUTS_INSTANCE);
+		createEReference(attributsInstanceEClass, ATTRIBUTS_INSTANCE__ATTRIBUTS);
+
+		connectionInstanceEClass = createEClass(CONNECTION_INSTANCE);
+		createEReference(connectionInstanceEClass, CONNECTION_INSTANCE__DATA_C);
+		createEReference(connectionInstanceEClass, CONNECTION_INSTANCE__EVENT_C);
+		createEReference(connectionInstanceEClass, CONNECTION_INSTANCE__IOINSTANCE);
+
+		dataInstanceEClass = createEClass(DATA_INSTANCE);
+
+		eventInstanceEClass = createEClass(EVENT_INSTANCE);
+
+		processEClass = createEClass(PROCESS);
+		createEReference(processEClass, PROCESS__INSTANCES);
+
+		instanceEClass = createEClass(INSTANCE);
 	}
 
 	/**
@@ -670,13 +930,19 @@ public class IacaPackageImpl extends EPackageImpl implements IacaPackage {
 		dataOutputEClass.getESuperTypes().add(this.getOutput());
 		eventInputEClass.getESuperTypes().add(this.getInput());
 		eventOuputEClass.getESuperTypes().add(this.getOutput());
+		componentInstanceEClass.getESuperTypes().add(this.getInstance());
+		ioInstanceEClass.getESuperTypes().add(this.getInstance());
+		attributsInstanceEClass.getESuperTypes().add(this.getInstance());
+		connectionInstanceEClass.getESuperTypes().add(this.getInstance());
+		dataInstanceEClass.getESuperTypes().add(this.getConnectionInstance());
+		eventInstanceEClass.getESuperTypes().add(this.getConnectionInstance());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(attributsEClass, Attributs.class, "Attributs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAttributs_Name(), ecorePackage.getEString(), "name", null, 1, 1, Attributs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAttributs_T(), this.getType(), null, "t", null, 0, 1, Attributs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAttributs_EReference0(), this.getAttributs(), null, "EReference0", null, 0, 1, Attributs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAttributs_Type(), this.getType(), null, "type", null, 1, 1, Attributs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAttributs_Name(), ecorePackage.getEString(), "name", null, 1, 1, Attributs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getComponent_Name(), ecorePackage.getEString(), "name", null, 1, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -725,6 +991,33 @@ public class IacaPackageImpl extends EPackageImpl implements IacaPackage {
 
 		initEClass(eventConnectionEClass, EventConnection.class, "EventConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEventConnection_Inputs(), this.getEventInput(), null, "inputs", null, 1, -1, EventConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(componentInstanceEClass, ComponentInstance.class, "ComponentInstance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getComponentInstance_Components(), this.getComponent(), null, "components", null, 0, -1, ComponentInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponentInstance_AttInstance(), this.getAttributsInstance(), null, "attInstance", null, 1, -1, ComponentInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponentInstance_Ioinstance(), this.getIOInstance(), null, "ioinstance", null, 1, -1, ComponentInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(inputInstanceEClass, InputInstance.class, "InputInstance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(ioInstanceEClass, IOInstance.class, "IOInstance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getIOInstance_Io(), this.getIO(), null, "io", null, 0, -1, IOInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(attributsInstanceEClass, AttributsInstance.class, "AttributsInstance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAttributsInstance_Attributs(), this.getAttributs(), null, "attributs", null, 0, -1, AttributsInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(connectionInstanceEClass, ConnectionInstance.class, "ConnectionInstance", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConnectionInstance_DataC(), this.getDataConnection(), null, "dataC", null, 0, -1, ConnectionInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnectionInstance_EventC(), this.getEventConnection(), null, "eventC", null, 0, -1, ConnectionInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnectionInstance_Ioinstance(), this.getIOInstance(), null, "ioinstance", null, 2, 2, ConnectionInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dataInstanceEClass, DataInstance.class, "DataInstance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(eventInstanceEClass, EventInstance.class, "EventInstance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(processEClass, iaca.Process.class, "Process", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProcess_Instances(), this.getInstance(), null, "instances", null, 0, -1, iaca.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(instanceEClass, Instance.class, "Instance", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

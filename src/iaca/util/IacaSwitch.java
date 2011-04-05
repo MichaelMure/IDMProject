@@ -7,18 +7,26 @@
 package iaca.util;
 
 import iaca.Attributs;
+import iaca.AttributsInstance;
 import iaca.Bit;
 import iaca.Char;
 import iaca.Component;
+import iaca.ComponentInstance;
+import iaca.ConnectionInstance;
 import iaca.DataConnection;
 import iaca.DataInput;
+import iaca.DataInstance;
 import iaca.DataOutput;
 import iaca.EventConnection;
 import iaca.EventInput;
+import iaca.EventInstance;
 import iaca.EventOuput;
 import iaca.IO;
+import iaca.IOInstance;
 import iaca.IacaPackage;
 import iaca.Input;
+import iaca.InputInstance;
+import iaca.Instance;
 import iaca.Library;
 import iaca.Output;
 import iaca.Real;
@@ -230,6 +238,68 @@ public class IacaSwitch<T> {
 			case IacaPackage.EVENT_CONNECTION: {
 				EventConnection eventConnection = (EventConnection)theEObject;
 				T result = caseEventConnection(eventConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IacaPackage.COMPONENT_INSTANCE: {
+				ComponentInstance componentInstance = (ComponentInstance)theEObject;
+				T result = caseComponentInstance(componentInstance);
+				if (result == null) result = caseInstance(componentInstance);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IacaPackage.INPUT_INSTANCE: {
+				InputInstance inputInstance = (InputInstance)theEObject;
+				T result = caseInputInstance(inputInstance);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IacaPackage.IO_INSTANCE: {
+				IOInstance ioInstance = (IOInstance)theEObject;
+				T result = caseIOInstance(ioInstance);
+				if (result == null) result = caseInstance(ioInstance);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IacaPackage.ATTRIBUTS_INSTANCE: {
+				AttributsInstance attributsInstance = (AttributsInstance)theEObject;
+				T result = caseAttributsInstance(attributsInstance);
+				if (result == null) result = caseInstance(attributsInstance);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IacaPackage.CONNECTION_INSTANCE: {
+				ConnectionInstance connectionInstance = (ConnectionInstance)theEObject;
+				T result = caseConnectionInstance(connectionInstance);
+				if (result == null) result = caseInstance(connectionInstance);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IacaPackage.DATA_INSTANCE: {
+				DataInstance dataInstance = (DataInstance)theEObject;
+				T result = caseDataInstance(dataInstance);
+				if (result == null) result = caseConnectionInstance(dataInstance);
+				if (result == null) result = caseInstance(dataInstance);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IacaPackage.EVENT_INSTANCE: {
+				EventInstance eventInstance = (EventInstance)theEObject;
+				T result = caseEventInstance(eventInstance);
+				if (result == null) result = caseConnectionInstance(eventInstance);
+				if (result == null) result = caseInstance(eventInstance);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IacaPackage.PROCESS: {
+				iaca.Process process = (iaca.Process)theEObject;
+				T result = caseProcess(process);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IacaPackage.INSTANCE: {
+				Instance instance = (Instance)theEObject;
+				T result = caseInstance(instance);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -519,6 +589,141 @@ public class IacaSwitch<T> {
 	 * @generated
 	 */
 	public T caseEventConnection(EventConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Component Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Component Instance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComponentInstance(ComponentInstance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Input Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Input Instance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInputInstance(InputInstance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>IO Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>IO Instance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIOInstance(IOInstance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Attributs Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Attributs Instance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAttributsInstance(AttributsInstance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Connection Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Connection Instance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConnectionInstance(ConnectionInstance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Data Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Data Instance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDataInstance(DataInstance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Event Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Event Instance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEventInstance(EventInstance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Process</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Process</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProcess(iaca.Process object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Instance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInstance(Instance object) {
 		return null;
 	}
 

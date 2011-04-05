@@ -161,6 +161,69 @@ public interface IacaFactory extends EFactory {
 	EventConnection createEventConnection();
 
 	/**
+	 * Returns a new object of class '<em>Component Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Component Instance</em>'.
+	 * @generated
+	 */
+	ComponentInstance createComponentInstance();
+
+	/**
+	 * Returns a new object of class '<em>Input Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Input Instance</em>'.
+	 * @generated
+	 */
+	InputInstance createInputInstance();
+
+	/**
+	 * Returns a new object of class '<em>IO Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>IO Instance</em>'.
+	 * @generated
+	 */
+	IOInstance createIOInstance();
+
+	/**
+	 * Returns a new object of class '<em>Attributs Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Attributs Instance</em>'.
+	 * @generated
+	 */
+	AttributsInstance createAttributsInstance();
+
+	/**
+	 * Returns a new object of class '<em>Data Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Data Instance</em>'.
+	 * @generated
+	 */
+	DataInstance createDataInstance();
+
+	/**
+	 * Returns a new object of class '<em>Event Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Event Instance</em>'.
+	 * @generated
+	 */
+	EventInstance createEventInstance();
+
+	/**
+	 * Returns a new object of class '<em>Process</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Process</em>'.
+	 * @generated
+	 */
+	Process createProcess();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

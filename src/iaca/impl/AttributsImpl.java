@@ -28,36 +28,16 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link iaca.impl.AttributsImpl#getName <em>Name</em>}</li>
  *   <li>{@link iaca.impl.AttributsImpl#getT <em>T</em>}</li>
  *   <li>{@link iaca.impl.AttributsImpl#getEReference0 <em>EReference0</em>}</li>
  *   <li>{@link iaca.impl.AttributsImpl#getType <em>Type</em>}</li>
+ *   <li>{@link iaca.impl.AttributsImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class AttributsImpl extends EObjectImpl implements Attributs {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getT() <em>T</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -87,6 +67,26 @@ public class AttributsImpl extends EObjectImpl implements Attributs {
 	 * @ordered
 	 */
 	protected Type type;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -269,8 +269,6 @@ public class AttributsImpl extends EObjectImpl implements Attributs {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case IacaPackage.ATTRIBUTS__NAME:
-				return getName();
 			case IacaPackage.ATTRIBUTS__T:
 				if (resolve) return getT();
 				return basicGetT();
@@ -279,6 +277,8 @@ public class AttributsImpl extends EObjectImpl implements Attributs {
 				return basicGetEReference0();
 			case IacaPackage.ATTRIBUTS__TYPE:
 				return getType();
+			case IacaPackage.ATTRIBUTS__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -291,9 +291,6 @@ public class AttributsImpl extends EObjectImpl implements Attributs {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case IacaPackage.ATTRIBUTS__NAME:
-				setName((String)newValue);
-				return;
 			case IacaPackage.ATTRIBUTS__T:
 				setT((Type)newValue);
 				return;
@@ -302,6 +299,9 @@ public class AttributsImpl extends EObjectImpl implements Attributs {
 				return;
 			case IacaPackage.ATTRIBUTS__TYPE:
 				setType((Type)newValue);
+				return;
+			case IacaPackage.ATTRIBUTS__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -315,9 +315,6 @@ public class AttributsImpl extends EObjectImpl implements Attributs {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case IacaPackage.ATTRIBUTS__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case IacaPackage.ATTRIBUTS__T:
 				setT((Type)null);
 				return;
@@ -326,6 +323,9 @@ public class AttributsImpl extends EObjectImpl implements Attributs {
 				return;
 			case IacaPackage.ATTRIBUTS__TYPE:
 				setType((Type)null);
+				return;
+			case IacaPackage.ATTRIBUTS__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -339,14 +339,14 @@ public class AttributsImpl extends EObjectImpl implements Attributs {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case IacaPackage.ATTRIBUTS__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case IacaPackage.ATTRIBUTS__T:
 				return t != null;
 			case IacaPackage.ATTRIBUTS__EREFERENCE0:
 				return eReference0 != null;
 			case IacaPackage.ATTRIBUTS__TYPE:
 				return type != null;
+			case IacaPackage.ATTRIBUTS__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}

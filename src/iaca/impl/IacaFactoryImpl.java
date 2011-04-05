@@ -7,17 +7,23 @@
 package iaca.impl;
 
 import iaca.Attributs;
+import iaca.AttributsInstance;
 import iaca.Bit;
 import iaca.Char;
 import iaca.Component;
+import iaca.ComponentInstance;
 import iaca.DataConnection;
 import iaca.DataInput;
+import iaca.DataInstance;
 import iaca.DataOutput;
 import iaca.EventConnection;
 import iaca.EventInput;
+import iaca.EventInstance;
 import iaca.EventOuput;
+import iaca.IOInstance;
 import iaca.IacaFactory;
 import iaca.IacaPackage;
+import iaca.InputInstance;
 import iaca.Library;
 import iaca.Real;
 
@@ -88,6 +94,13 @@ public class IacaFactoryImpl extends EFactoryImpl implements IacaFactory {
 			case IacaPackage.EVENT_OUPUT: return createEventOuput();
 			case IacaPackage.DATA_CONNECTION: return createDataConnection();
 			case IacaPackage.EVENT_CONNECTION: return createEventConnection();
+			case IacaPackage.COMPONENT_INSTANCE: return createComponentInstance();
+			case IacaPackage.INPUT_INSTANCE: return createInputInstance();
+			case IacaPackage.IO_INSTANCE: return createIOInstance();
+			case IacaPackage.ATTRIBUTS_INSTANCE: return createAttributsInstance();
+			case IacaPackage.DATA_INSTANCE: return createDataInstance();
+			case IacaPackage.EVENT_INSTANCE: return createEventInstance();
+			case IacaPackage.PROCESS: return createProcess();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -241,6 +254,76 @@ public class IacaFactoryImpl extends EFactoryImpl implements IacaFactory {
 	public EventConnection createEventConnection() {
 		EventConnectionImpl eventConnection = new EventConnectionImpl();
 		return eventConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ComponentInstance createComponentInstance() {
+		ComponentInstanceImpl componentInstance = new ComponentInstanceImpl();
+		return componentInstance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InputInstance createInputInstance() {
+		InputInstanceImpl inputInstance = new InputInstanceImpl();
+		return inputInstance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IOInstance createIOInstance() {
+		IOInstanceImpl ioInstance = new IOInstanceImpl();
+		return ioInstance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AttributsInstance createAttributsInstance() {
+		AttributsInstanceImpl attributsInstance = new AttributsInstanceImpl();
+		return attributsInstance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DataInstance createDataInstance() {
+		DataInstanceImpl dataInstance = new DataInstanceImpl();
+		return dataInstance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EventInstance createEventInstance() {
+		EventInstanceImpl eventInstance = new EventInstanceImpl();
+		return eventInstance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public iaca.Process createProcess() {
+		ProcessImpl process = new ProcessImpl();
+		return process;
 	}
 
 	/**

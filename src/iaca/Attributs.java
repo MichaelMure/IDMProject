@@ -18,10 +18,10 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link iaca.Attributs#getName <em>Name</em>}</li>
  *   <li>{@link iaca.Attributs#getT <em>T</em>}</li>
  *   <li>{@link iaca.Attributs#getEReference0 <em>EReference0</em>}</li>
  *   <li>{@link iaca.Attributs#getType <em>Type</em>}</li>
+ *   <li>{@link iaca.Attributs#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *

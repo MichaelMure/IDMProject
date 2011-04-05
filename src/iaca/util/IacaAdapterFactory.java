@@ -7,18 +7,26 @@
 package iaca.util;
 
 import iaca.Attributs;
+import iaca.AttributsInstance;
 import iaca.Bit;
 import iaca.Char;
 import iaca.Component;
+import iaca.ComponentInstance;
+import iaca.ConnectionInstance;
 import iaca.DataConnection;
 import iaca.DataInput;
+import iaca.DataInstance;
 import iaca.DataOutput;
 import iaca.EventConnection;
 import iaca.EventInput;
+import iaca.EventInstance;
 import iaca.EventOuput;
 import iaca.IO;
+import iaca.IOInstance;
 import iaca.IacaPackage;
 import iaca.Input;
+import iaca.InputInstance;
+import iaca.Instance;
 import iaca.Library;
 import iaca.Output;
 import iaca.Real;
@@ -162,6 +170,42 @@ public class IacaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseEventConnection(EventConnection object) {
 				return createEventConnectionAdapter();
+			}
+			@Override
+			public Adapter caseComponentInstance(ComponentInstance object) {
+				return createComponentInstanceAdapter();
+			}
+			@Override
+			public Adapter caseInputInstance(InputInstance object) {
+				return createInputInstanceAdapter();
+			}
+			@Override
+			public Adapter caseIOInstance(IOInstance object) {
+				return createIOInstanceAdapter();
+			}
+			@Override
+			public Adapter caseAttributsInstance(AttributsInstance object) {
+				return createAttributsInstanceAdapter();
+			}
+			@Override
+			public Adapter caseConnectionInstance(ConnectionInstance object) {
+				return createConnectionInstanceAdapter();
+			}
+			@Override
+			public Adapter caseDataInstance(DataInstance object) {
+				return createDataInstanceAdapter();
+			}
+			@Override
+			public Adapter caseEventInstance(EventInstance object) {
+				return createEventInstanceAdapter();
+			}
+			@Override
+			public Adapter caseProcess(iaca.Process object) {
+				return createProcessAdapter();
+			}
+			@Override
+			public Adapter caseInstance(Instance object) {
+				return createInstanceAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -446,6 +490,132 @@ public class IacaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEventConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link iaca.ComponentInstance <em>Component Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see iaca.ComponentInstance
+	 * @generated
+	 */
+	public Adapter createComponentInstanceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link iaca.InputInstance <em>Input Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see iaca.InputInstance
+	 * @generated
+	 */
+	public Adapter createInputInstanceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link iaca.IOInstance <em>IO Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see iaca.IOInstance
+	 * @generated
+	 */
+	public Adapter createIOInstanceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link iaca.AttributsInstance <em>Attributs Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see iaca.AttributsInstance
+	 * @generated
+	 */
+	public Adapter createAttributsInstanceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link iaca.ConnectionInstance <em>Connection Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see iaca.ConnectionInstance
+	 * @generated
+	 */
+	public Adapter createConnectionInstanceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link iaca.DataInstance <em>Data Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see iaca.DataInstance
+	 * @generated
+	 */
+	public Adapter createDataInstanceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link iaca.EventInstance <em>Event Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see iaca.EventInstance
+	 * @generated
+	 */
+	public Adapter createEventInstanceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link iaca.Process <em>Process</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see iaca.Process
+	 * @generated
+	 */
+	public Adapter createProcessAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link iaca.Instance <em>Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see iaca.Instance
+	 * @generated
+	 */
+	public Adapter createInstanceAdapter() {
 		return null;
 	}
 
