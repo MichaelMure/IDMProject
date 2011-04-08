@@ -4,11 +4,8 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="iaca"
     nsURI="http://iaca/1.0" nsPrefix="iaca">
   <eClassifiers xsi:type="ecore:EClass" name="Attributs">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="t" eType="#//Type"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="EReference0" eType="#//Attributs"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Type"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//Type"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -21,13 +18,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="c" lowerBound="1" upperBound="-1"
         eType="#//Component" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Bit" eSuperTypes="#//Type"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Integer" eSuperTypes="#//Type"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Long" eSuperTypes="#//Type"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Real" eSuperTypes="#//Type"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Char" eSuperTypes="#//Type"/>
-  <eClassifiers xsi:type="ecore:EClass" name="String" eSuperTypes="#//Type"/>
   <eClassifiers xsi:type="ecore:EClass" name="Input" abstract="true" eSuperTypes="#//IO"/>
   <eClassifiers xsi:type="ecore:EClass" name="Output" abstract="true" eSuperTypes="#//IO"/>
   <eClassifiers xsi:type="ecore:EClass" name="DataInput" eSuperTypes="#//Input">
@@ -47,8 +37,6 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IO" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Type"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataConnection">
@@ -59,36 +47,63 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" lowerBound="1"
         upperBound="-1" eType="#//EventInput"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ComponentInstance" eSuperTypes="#//Instance">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentInst">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instanceOf" lowerBound="1"
         eType="#//Component"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attInstance" lowerBound="1"
-        upperBound="-1" eType="#//AttributsInstance" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ioinstance" lowerBound="1"
-        upperBound="-1" eType="#//IOInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attsInst" lowerBound="1"
+        eType="#//AttributsInst" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InputInstance"/>
-  <eClassifiers xsi:type="ecore:EClass" name="IOInstance" eSuperTypes="#//Instance">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="io" upperBound="-1" eType="#//IO"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AttributsInstance" eSuperTypes="#//Instance">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attributs" upperBound="-1"
+  <eClassifiers xsi:type="ecore:EClass" name="AttributsInst">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instanceOf" lowerBound="1"
         eType="#//Attributs"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConnectionInstance" abstract="true"
-      eSuperTypes="#//Instance">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataC" upperBound="-1"
-        eType="#//DataConnection"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="eventC" upperBound="-1"
-        eType="#//EventConnection"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ioinstance" lowerBound="2"
-        upperBound="2" eType="#//IOInstance" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DataInstance" eSuperTypes="#//ConnectionInstance"/>
-  <eClassifiers xsi:type="ecore:EClass" name="EventInstance" eSuperTypes="#//ConnectionInstance"/>
   <eClassifiers xsi:type="ecore:EClass" name="Process">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="instances" upperBound="-1"
-        eType="#//Instance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instanceOf" lowerBound="1"
+        upperBound="-1" eType="#//ComponentInst"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Instance" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="Type">
+    <eLiterals name="String"/>
+    <eLiterals name="Bit" value="1"/>
+    <eLiterals name="Integer" value="2"/>
+    <eLiterals name="Long" value="3"/>
+    <eLiterals name="Real" value="4"/>
+    <eLiterals name="Char" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IOInst" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InputInst" abstract="true" eSuperTypes="#//IOInst"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OuputInst" abstract="true" eSuperTypes="#//IOInst"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataInputInst" eSuperTypes="#//InputInst">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instanceOf" lowerBound="1"
+        eType="#//DataInput"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventInputInst" eSuperTypes="#//InputInst">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instanceOf" lowerBound="1"
+        eType="#//EventInput"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataOuputInst" eSuperTypes="#//OuputInst">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instanceOf" lowerBound="1"
+        eType="#//DataOutput"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectionInst" eType="#//DataConnectionInst"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventOutputInst" eSuperTypes="#//OuputInst">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instanceOf" lowerBound="1"
+        eType="#//EventOuput"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectionIns" eType="#//EventConnectionInst"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventConnectionInst">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instanceOf" lowerBound="1"
+        eType="#//EventConnection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputsInst" lowerBound="1"
+        upperBound="-1" eType="#//EventInputInst"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataConnectionInst">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instanceOf" lowerBound="1"
+        eType="#//DataConnection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputsInst" lowerBound="1"
+        upperBound="-1" eType="#//DataInputInst"/>
+  </eClassifiers>
 </ecore:EPackage>

@@ -5,10 +5,12 @@ import java.io.IOException;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
+import iaca.AttributsInstance;
 import iaca.Component;
+import iaca.ComponentInstance;
 import iaca.IacaFactory;
 import iaca.IacaPackage;
-import iaca.impl.IacaFactoryImpl;
+import iaca.Process;
 import iaca.util.Util;
 
 public class Figure1 {
@@ -29,6 +31,9 @@ public class Figure1 {
 		Component diviseur = (Component) list.get(5);
 		Component bascule = (Component) list.get(6);
 		Component cligno = (Component) list.get(7);
+		
+		Process figure1 = IacaFactory.eINSTANCE.createProcess();
+		ComponentInstance bitInstance = IacaFactory.eINSTANCE.createComponentInstance();
 		
 		try {
 			Util.saveModel("model/test.xmi", library);
